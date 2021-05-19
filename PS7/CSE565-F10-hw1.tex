@@ -1,0 +1,95 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{fullpage,amsmath,hyperref,color}
+
+\addtolength{\textwidth}{0.2in}
+\addtolength{\oddsidemargin}{-0.1in}
+\addtolength{\evensidemargin}{-0.1in}
+
+\addtolength{\textheight}{0.5in}
+\addtolength{\topmargin}{-0.25in}
+
+\begin{document}
+{\noindent\large
+{\em Algorithm Design and Analysis} \hfill \today\\
+Pennsylvania State University \hfill CSE 565, Fall 2010\\
+Adam Smith \hfill Homework 1\\}
+\vspace{1pt} \hrulefill\vspace{3mm}
+\begin{center}
+{\LARGE\bf Homework 1 -- Due Friday, September 3, 2010}
+\end{center}
+
+Please refer to the general information handout for the full homework policy and options.
+\paragraph{Reminders}
+\begin{itemize}
+\item Your solutions are due before the lecture. Late homework will not be accepted.
+\item
+Collaboration is permitted, but you must write the solutions {\em by
+yourself without assistance}, and be ready to explain them orally to
+a member of the course staff if asked. You must also identify your
+collaborators. {\em Getting solutions from outside sources such as the
+Web or students not enrolled in the class is strictly forbidden.}
+
+\item
+To facilitate grading, please write down your solution to each problem on a separate sheet of paper. Make sure to include all identifying information and your collaborators on each sheet. Your solutions to different problems will be graded separately, possibly by different people, and returned to you independently of each other.
+
+\item For problems that require you to provide an algorithm, you must
+  give a precise description of the algorithm, together with a proof of correctness and an analysis of its running time. You may use algorithms from class as subroutines. You may also use any facts that we proved in class. 
+
+\end{itemize}
+
+\paragraph{Exercises}
+
+These should not be handed in, but the material they cover may
+appear on exams: problems in Chapters 1 and 2.
+
+\paragraph{Problems to be handed in}
+
+\begin{enumerate}
+\item ({\bf Review of Divide and Conquer}) Your niece has a number between 1 and $n$
+  in her head, which she wants you to guess. After playing the game
+  with her for a while, you notice the following pattern: when your
+  current guess is closer to her number than your previous guess, she
+  giggles; when your current guess is further away than previous guess
+  (or the same distance away) she frowns. When you guess the right
+  answer exactly, the jumps up and down and screams ``you guessed
+  it!''.
+
+  Give an algorithm that uses this extra information to find the
+  secret number quickly. You can guess a number with the pseudocode
+  command ``guess($x$)''. After the first guess, this command will
+  return either ``closer'', ``further'' or ``correct.'' (On the first
+  guess, the command returns only ``correct'' or ``wrong''.) Please give
+  {\em both} an English description {\em and} pseudocode for your
+  algorithm. Prove its correctness and analyze its time and space complexity.
+
+  To get any credit at all, your algorithm must be correct. For full
+  credit, your algorithm should use $\log_2(n) + O(1)$ guesses in the
+  worst case. You might find it helpful to recall how binary search
+  works (but you'll need a slightly different pattern of queries to
+  get full credit).
+
+\item ({\bf Stable Matching with Indifferences}) Chapter 1, problem 5. 
+
+If you give an algorithm for either part of the question, please give {\em both} an English description {\em and} pseudocode for your algorithm. Prove its correctness and analyze its time and space complexity. 
+
+% \item ({\bf Truthfulness in Stable Matching}) Chapter 1, problem 8. {\em Hint:} Try playing with several specific examples of preference lists.
+
+
+\item ({\bf Order of Growth Rate}) Chapter 2, problems 3 and 4. Please add $g_8(n)=n!$ to the list of functions in \#4.
+
+\item ({\bf Understanding big-O notation}) Chapter 2, problem 5.
+
+\item * ({\bf Optional: How Many Stable Matchings?}) The analysis of the Gale-Shapley algorithm establishes that every instance of the stable marriage problem admits at least one stable matching. Here we consider {\em how many} such matchings might exist. 
+
+(NB: You must solve both parts of the problem to receive credit.)
+
+\begin{enumerate}
+\item Give an algorithm that takes an instance of the stable marriage problem as input and decides if there is {\em exactly one} stable matching for this instance (that is, the algorithm outputs either ``unique stable matching'', or ``more than one stable matching''). Pay close attention to the proof of correctness of your algorithm. 
+
+
+\item Show that the maximum number of possible stable matchings for instances with $n$ men and $n$ women scales at least exponentially with $n$: that is, show that there is a constant $c>1$, and a sequence of instances of the stable marriage problem, $x_1, x_2,...$, one for each value of $n$, such that the number of stable matchings in instance $x_n$ is at least $c^n$. (Extra extra points for a construction with $c>2$.)
+\end{enumerate}
+
+\end{enumerate}
+\end{document}
